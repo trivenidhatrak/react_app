@@ -21,10 +21,15 @@ updateStateSecond(event) {
   this.setState({secondInt: event.target.value});
 }
 handleSwap() {
-  
-  const ans =parseInt(this.state.firstInt)+parseInt(this.state.secondInt) ;
-
-  alert('Answer ='+ans);
+  if(this.state.firstInt === "" || this.state.secondInt==="")
+  {
+    alert('Enter Values');
+  }
+  else 
+  {
+    const ans =parseInt(this.state.firstInt)+parseInt(this.state.secondInt) ;
+    alert('Answer ='+ans);
+  }
 
 }
 
